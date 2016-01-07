@@ -7,14 +7,19 @@ import os
 
 # 设置磁盘磁道、扇区信息
 def initDiskLst():
+    hashDigit = 32
+
     trackNum = 20  # 磁道数
     sectorNum = 10  # 每个磁道的扇区数
     sectorSize = 4096  # 扇区大小
+    sectorDateSize = 4096 - hashDigit
 
     diskLst = []    # 磁盘磁道扇区参数表
     diskLst.append(trackNum)
     diskLst.append(sectorNum)
     diskLst.append(sectorSize)
+    diskLst.append(sectorDateSize)
+
     return diskLst
 
 
@@ -70,4 +75,4 @@ def main():
     initDisk(diskLst, diskName[1])
     return 0;
 
-main()
+#main()
