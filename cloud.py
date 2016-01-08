@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import qiniu
-from qiniu import *
+from qiniu import Auth, BucketManager
 import requests
 
 access_key = 'Pv-3kPDRyhF8pzA2feqwv5WjofKxxZW9i-DtDmr4'
@@ -68,7 +68,6 @@ def cloudBackupSector(sectorPath):
 
 # 从云端恢复指定扇区
 def getBackupSector(sectorPath):
-	
 	cloudFileName = sectorPath[-11:-8] + sectorPath[-7:]
 	localPath = sectorPath
 	download(cloudFileName, localPath)

@@ -69,7 +69,6 @@ def main():
 
 	diskName = ["disk", "backup"]
 	initDisk(diskLst, diskName[0])
-	#initDisk(diskLst, diskName[1])
 	return 0;
 
 main()
